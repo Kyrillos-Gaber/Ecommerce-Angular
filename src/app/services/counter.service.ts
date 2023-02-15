@@ -7,10 +7,11 @@ import { BehaviorSubject } from 'rxjs';
 export class CounterService {
 
   private counterData = new BehaviorSubject(0);
+  counterValue = this.counterData.asObservable();
 
   constructor() { }
 
-  // updateCounter(newVal) {
-
-  // }
+  updateCounter(newVal : number) {
+    this.counterData.next(newVal);
+  }
 }

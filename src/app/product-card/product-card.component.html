@@ -7,7 +7,11 @@
     <!-- <p [ngStyle]="{'color': product.count? 'green' : 'red' }" >{{product.count > 0 ? 'instock: ' + product.count : 'outstock'}}</p> -->
 
     <h3>{{product.price}}</h3>
-
+    <div class="d-flex my-5 gap-5">
+      <button class="btn btn-danger"  (click)="decreaseCounter()">-</button>
+      <h3>{{ productCounter }}</h3>
+      <button class="btn btn-success" (click)="increaseCounter()" >+</button>
+    </div>
     <a [routerLink]="['details', product.id]"  class="btn btn-primary">view</a>
   </div>
 </div>
