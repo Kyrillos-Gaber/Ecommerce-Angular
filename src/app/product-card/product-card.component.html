@@ -8,9 +8,6 @@
 
     <h3>{{ product.price | currency:"EGP"}}</h3>
     <div class="d-flex my-5 gap-5">
-      <button class="btn btn-danger"  (click)="decreaseCounter()">-</button>
-      <h3>{{ productCounter }}</h3>
-      <button class="btn btn-success" (click)="increaseCounter()" >+</button>
       <button class="btn btn-success" (click)="addToCart()" >Add to Cart</button>
     </div>
     <a [routerLink]="['details', product.id]"  class="btn btn-primary">view</a>

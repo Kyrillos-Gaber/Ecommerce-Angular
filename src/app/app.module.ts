@@ -13,6 +13,8 @@ import { DetailsComponent } from './details/details.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+import { CartTableRowComponent } from './cart-table-row/cart-table-row.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     LoginComponent,
     DetailsComponent,
-    AllProductsComponent
+    AllProductsComponent,
+    CartComponent,
+    CartTableRowComponent
   ],
   imports: [
     BrowserModule,

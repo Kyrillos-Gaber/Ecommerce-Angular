@@ -1,0 +1,16 @@
+<tbody>
+  <tr>
+    <th scope="row">{{item.id}}</th>
+    <td>{{item.title}}</td>
+    <td>
+      <img [src]="item.image" width="100px">
+    </td>
+    <td>{{item.price}}</td>
+    <!-- counter item -->
+    <td>
+      <button class="btn btn-danger" (click)="decreaseCounter()">-</button>
+      <h3>{{ counter }}</h3>
+      <button class="btn btn-success" (click)="increaseCounter()">+</button>
+    </td>
+  </tr>
+</tbody>

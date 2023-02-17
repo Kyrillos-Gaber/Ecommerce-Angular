@@ -14,13 +14,14 @@ export class ProductCardComponent implements OnInit {
 
   productCounter = 0;
 
-  @Input() product: IProduct = {
+  @Input() product :IProduct = {
     id: '',
     title: '',
     price: '',
     category: '',
     description: '',
     image: '',
+    // counter : 0
   };
 
   constructor(
@@ -32,17 +33,9 @@ export class ProductCardComponent implements OnInit {
     this.counterService.counterValue.subscribe((res) => (this.counter = res));
   }
 
-  increaseCounter() {
-    this.productCounter++;
-    this.counterService.updateCounter(++this.counter);
-  }
-
-  decreaseCounter() {
-    this.productCounter--;
-    this.counterService.updateCounter(--this.counter);
-  }
 
   addToCart() {
     this.sendProduct.getCartItem(this.product);
   }
+
 }

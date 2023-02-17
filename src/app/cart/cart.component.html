@@ -1,0 +1,19 @@
+<table class="table" *ngFor="let item of cartList">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Image</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+  <!-- componet has => quantity counter 2 + - -->
+  <app-cart-table-row [item]="item" (outCounter)="reciveFromChild($event)"></app-cart-table-row>
+
+</table>
+
+<div>
+  <h4>Total Price: {{totalPrice}}</h4>
+  <h4>Total Qty: {{totalQty}}</h4>
+</div>

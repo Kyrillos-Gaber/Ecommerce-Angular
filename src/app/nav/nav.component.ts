@@ -11,10 +11,10 @@ export class NavComponent implements OnInit {
 
   counter = 0;
 
-  constructor(private counterService : CounterService) {}
+  // constructor(private counterService : CounterService) {}
 
   ngOnInit(): void {
-    this.counterService.counterValue.subscribe((res)=> this.counter = res);
+    // this.counterService.counterValue.subscribe((res)=> this.counter = res);
   }
 
 }

@@ -5,6 +5,7 @@ import { NaComponent } from './na/na.component';
 import { LoginComponent } from './login/login.component';
 import { DetailsComponent } from './details/details.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: "details/:id",
     component: DetailsComponent
+  },
+  {
+    path: "cart",
+    component: CartComponent
   },
   {
     path: "**",
